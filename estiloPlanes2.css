@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    background-color: #ebf4fa;
+    color:blueviolet;
+}
+
+/* HEADER */
+
+.header{
+    background-color: cornflowerblue;
+    color: #ffffff;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    .navegacion{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding: 1.5rem 0;
+
+        .anclaLogo{
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.2rem;
+
+            /* Animación hover */
+            /* &:hover{
+                animation: tilt-n-move-shaking 0.25s infinite;
+            } */
+        }
+
+        .listaNav{
+            list-style: none;
+            display: flex;
+            align-items: center;
+
+            /* Botones */
+            .listaItem{
+                margin-right: 20px;
+
+                .linkNav{
+                    background-color: rgb(75, 132, 238);
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-weight: 700;
+                    font-size: 1.1rem;
+                    padding: 0.5rem 1rem;
+                    border-radius: 5px;
+
+                    /* Efecto de botón presionado */
+                    transition: transform 0.3s, box-shadow 0.3s;
+                    &:hover{
+                        transform: scale(0.95);
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                        border-radius: 5px;
+                    }
+                }
+
+                /* Botón "mi cuenta" */
+                .linkNav.miCuenta{
+                    background-color: rgb(54, 116, 230);
+                    color: #ffffff;
+                    border-radius: 5px;
+
+                    /* Efecto de botón presionado */
+                    transition: transform 0.3s, box-shadow 0.3s;
+                    &:hover{
+                        background-color: cornflowerblue;
+                        transform: scale(0.95);
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Estilos de HEADER para mobile y tablet */
+@media (max-width: 760px){
+    .header{
+        height: initial;
+
+        .navegacion{
+            margin-left: 10px;
+            margin-right: 10px;
+            flex-direction: column;
+            row-gap: 20px;
+
+            .anclaLogo{
+                font-weight: 700;
+                font-size: 1.2rem;
+            }
+
+            .listaNav{
+                padding: initial;
+
+                .listaItem{
+                    .linkNav{
+                        font-weight: 400;
+                        margin-right: initial;
+                        font-size: 1rem;
+                        padding: 0.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* MAIN */
+.main{
+
+    /* Primera parte: índice de los planes */
+    .sectionPlanes{
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 10px;
+
+        .tituloSectionP{
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .planesIndice{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 60px;
+
+            .listaPlanes{
+                list-style: none;
+                display: flex;
+                align-items: center;
+
+                /* Carteles */
+                .listaCartel{
+                    width: 300px;
+                    height: 300px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    transition: all 0.5s ease;
+        
+                    &:hover{                       
+                        backdrop-filter: blur(20px);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        box-shadow: 0 0 30px #050505cd;
+                        transform: scale(0.9);
+                    }
+
+                    .linkPlanes{
+                        color: #ffffff;
+                        text-decoration: none;
+                        z-index: 2;
+                        position: absolute;
+                        text-align: center;
+                        top: 50%;
+                        left: 50%;
+                        max-width: 20rem;
+                        width: 100%;
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                        letter-spacing: 0.1rem;
+                            
+                    }
+                
+                }
+            }
+            
+            
+            
+            /* a{
+                text-decoration: none;
+                color: #ffffff;
+                .plan{
+                    }
+
+                    .tituloPlan{
+                        z-index: 2;
+                        position: absolute;
+                        text-align: center;
+                        top: 50%;
+                        left: 50%;
+                        max-width: 20rem;
+                        width: 100%;
+                        transform: translateY(-50%) translateX(-50%);
+
+                        h4{
+                            font-size: 1.6rem;
+                            font-weight: bold;
+                            opacity: 0;
+                            margin-bottom: 0.5rem;
+                            letter-spacing: 0.1rem;
+                            transition: opacity 0.5s ease-in-out;
+                        }
+                    }
+                    
+
+                    &:hover .tituloPlan{
+                        width: 100%;
+                        height: 100%;
+                        backdrop-filter: blur(20px);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    &:hover h4{
+                        width: 100%;
+                        padding: 0.5rem;
+                        opacity: 1;
+                    }
+                }
+            } */
+        }
+    }
+}
