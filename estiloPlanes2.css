@@ -145,8 +145,29 @@ body{
             grid-gap: 20px;
             align-items: stretch;
             place-content: center;
+
+            .txtimgContenedor{
+                position: relative;
+                text-align: center;
+                
+                a{ 
+                    font-weight: 700;
+                    font-size: 3.5rem;
+                    color: #ffffff;
+                    text-shadow: 0 0 30px #050505, 0 0 5px #050505;
+                    text-decoration: none;
+                }
+                .centrado{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    
+                }
+            }
+              
     
-            img {
+            img{
                 max-width: 100%;
                 border-radius: 5px;
     
