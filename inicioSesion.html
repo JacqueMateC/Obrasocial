@@ -19,10 +19,7 @@
                 <span>OBRA SOCIAL</span>
             </a>
             <ul class="navLista">
-                <!-- <li class="navItem"><a href="#" class="navLink">Quiénes somos</a></li> -->
                 <li class="navItem"><a href="planes2.html" class="navLink">Planes</a></li>
-                <!-- <li class="navItem"><a href="#" class="navLink">Sucursales</a></li> -->
-                <!-- <li class="navItem"><a href="#" class="navLink">Novedades</a></li> -->
                 <li class="navItem"><a href="faq.html" class="navLink">Preguntas frecuentes</a></li>
                 <li class="navItem"><a href="contacto.html" class="navLink">Contacto</a></li>
                 <li class="navItem"><a href="inicioSesion.html" class="navLink miCuenta"><i class="fas fa-user"></i> Mi cuenta</a></li>
@@ -33,14 +30,25 @@
 <!-- LOGIN -->
 <main id="main" class="main">
     <section class="loguearse">
-        <form class="formulario">
+        <form class="formulario" id="loginForm">
             <h1>Iniciar sesión</h1>
             <p>Ingresá tus datos para acceder a tu cuenta.</p>
-            <div><input class="input" type="email" id="email" name="email" placeholder="Email"></div>
-            <div><input class="input" type="password" id="password" name="password" placeholder="Contraseña"></div>
+            <div>
+                <input class="input" type="email" id="email" name="email" placeholder="Email">
+                <div id="emailError" class="error"></div>
+            </div>
+            <div>
+                <input class="input" type="password" id="password" name="password" placeholder="Contraseña">
+                <div id="passwordError" class="error"></div>
+            </div>
             <div><input class="botonIngresar" type="submit" value="Ingresar"></div>
             <p>¿No sos socio? <a href="">Registrate</a></p>
         </form>
+    </section>
+    <section id="graciasMsj" class="gracias-" style="display:none;">
+        <h1>Muchas Gracias! Revisa tu correo</h1>
+        <button class="botonEstilo" onclick="window.location.href='index.html'">Continuar</button>
+    
     </section>
 </main>
     
@@ -57,5 +65,6 @@
             </ul>
         </div>
     </footer>
+    <script src="inicioSesion.js"></script>
 </body>
 </html>

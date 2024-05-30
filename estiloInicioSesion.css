@@ -281,4 +281,65 @@ body{
             }
         }
     }
+    
+    
+
+
+}.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.gracias- {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.gracias- h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.gracias- button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.gracias- button:hover {
+    background-color: #0056b3;
+}
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.thank-you {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.botonEstilo {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.botonEstilo:hover {
+    background-color: #0056b3;
+}
+
+.botonEstilo:visited, .botonEstilo:active {
+    color: #fff;
 }
