@@ -1,22 +1,94 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Salud</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+<!DOCTYPE html >
+< html  lang =" es " >
+< html  lang =" es " >
+< cabeza >
+    < meta  juego de caracteres =" UTF-8 " >
+    < meta  nombre =" ventana gráfica " contenido =" ancho = ancho del dispositivo, escala inicial = 1,0 " >
+    < título > Página de Salud </ título >
+<estilo>​​
+cuerpo {
+    familia de fuentes: Arial, sans-serif;
+    margen: 0;
+    relleno: 0;
+    color de fondo: #f0f8ff;
+}
+
+encabezado {
+    color de fondo: #add8e6;
+    relleno: 20px;
+    alineación de texto: centro;
+    color blanco;
+}
+
+navegación {
+    color de fondo: #add8e6;
+    desbordamiento: oculto;
+}
+
+navegar a {
+    flotador izquierdo;
+    bloqueo de pantalla;
+    color blanco;
+    alineación de texto: centro;
+    relleno: 14px 16px;
+    decoración de texto: ninguna;
+}
+
+navegación a: pasar el cursor {
+    color de fondo: #00bfff;
+}
+
+sección {
+    relleno: 20px;
+    margen superior: 10px;
+}
+
+pie de página {
+    color de fondo: #add8e6;
+    relleno: 10px;
+    alineación de texto: centro;
+    color blanco;
+    posición: fija;
+    ancho: 100%;
+    abajo: 0;
+}
+</estilo>​​
+
+    < enlace  rel =" hoja de estilo " href =" estiloIndex.css " >
+    <!-- Iconos -->
+    < link  rel =" icono de acceso directo " href =" imagees/favicon.ico " type =" image/x-icon " >
+    < script  src =" https://kit.fontawesome.com/906492adb2.js " crossorigin =" anónimo " > </ script >
+    < título > Obra Social - Inicio </ título >
+</cabeza>​​
+    
 <body>
-    <header>
-        <h1>Somos tu cobertura Medica</h1>
-        <nav>
-            <a href="planes2.html">Planes</a>
-            <a href="#sucursales">Sucursales</a>
-            <a href="#novedades">Novedades</a>
-            <a href="#preguntas">Preguntas Frecuentes</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-    </header>
+ <encabezado>​​
+        < h1 >  Somos Tu cobertura Medica</ h1 >
+        < nav >
+            < a  href =" planos2.html " > Aviones </ a >
+            < a  href =" #sucursales " > Sucursales </ a >
+            < a  href =" #novedades " > Novedades </ a >
+            < a  href =" #preguntas " > Preguntas Frecuentes </ a >
+            < a  href =" #contacto " > Contacto </ a >
+            < a  href =" #mi-cuenta " > Mi Cuenta </ ​​a >
+ <!-- ENCABEZADO -->
+    < clase de encabezado  =" encabezado " >
+        < nav  class =" navegación " >
+            < a  href =" index.html " clase =" anclaLogo " >
+                < i  class =" fas fa-house-medical " aria-hidden =" true " > </ i >
+                <span> OBRA SOCIAL </span>​​​
+            </a>​​
+            < ul  clase =" navLista " >
+                <!-- <li class="navItem"><a href="#" class="navLink">Quiénes somos</a></li> -->
+                < li  class =" navItem " > < a  href =" planes2.html " class =" navLink " > Aviones </ a > </ li >
+                <!-- <li class="navItem"><a href="#" class="navLink">Sucursales</a></li> -->
+                <!-- <li class="navItem"><a href="#" class="navLink">Novedades</a></li> -->
+                < li  class =" navItem " > < a  href =" faq.html " class =" navLink " > Preguntas frecuentes </ a > </ li >
+                < li  class = " navItem " > < a  href = " contacto.html " class = " navLink " > Contacto </a> </li>​
+                < li  class =" navItem " > < a  href =" inicioSesion.html " class =" navLink miCuenta " > < i  class =" fas fa-user " > </ i > Mi cuenta </ ​​a > </ li >
+            </ul>​​          
+        </nav>​​
+    </encabezado>​​
 
     <section id="planes">
         <h2>Planes</h2>
@@ -76,6 +148,69 @@
         </div>
     </footer>
 
+    < id principal  =" principal " clase =" principal " >
+ <!-- ACORDEÓN -->
+        < div  class =" acordeón " >
+            <!-- Quienes somos -->
+            < tipo de entrada  =" radio " nombre =" seleccionar " clase =" acordeon-select " marcado />
+            < div  class =" acordeon-title " > < span > Quiénes somos </ span > </ div >
+            < div  class =" acordon-content " id =" somos " >
+                < p > Empresa privada que brinda servicios de atención médica a sus afiliados a cambio de una cuota mensual. < br >
+                Ofrecemos una variedad de planes de salud que pueden incluir consultas médicas, hospitalización, servicios de laboratorio, medicamentos, y en algunos casos también servicios de odontología, oftalmología, y otros tratamientos especializados. </p>​​
+            </div>​​
+            <!-- Sucursales -->
+            < tipo de entrada  =" radio " nombre =" seleccionar " clase =" acordeon-select " />
+            < div  class =" acordeon-title " > < span > Sucursales </ span > </ div >
+            < div  class =" acordeon-content " > < p > Información sobre las sucursales de la obra social. </p> </div>​​​​
+            <!-- Novedades -->
+            < tipo de entrada  =" radio " nombre =" seleccionar " clase =" acordeon-select " />
+            < div  class =" acordeon-title " > < span > Novedades </ span > </ div >
+            < div  class =" acordeon-content " >
+                < ul >
+                    < li > Nuevos planes de salud </ li >
+                    < li > Coberturas especiales </ li >
+                    < li  class =" descripcion " > Nuevas coberturas o servicios especiales, como atención domiciliaria, telemedicina, programas de bienestar. </li>​​
+                    < li > Alianzas y convenios </ li >
+                    < li  class =" descripcion " > Nuevas alianzas con centros médicos, laboratorios, farmacias u otros proveedores de servicios de salud. </li>​​
+                    < li > Tecnología y aplicaciones </ li >
+                    < li  class =" descripcion " > Plataformas en línea para facilitar la gestión de la salud y el acceso a servicios. </li>​​
+                    < li > Eventos y actividades </ li >
+                    < li  class =" descripcion " > Eventos, charlas educativas, programas de prevención de enfermedades u otras actividades relacionadas con la salud. </li>​​
+                    < li > Actualizaciones legales </ li >
+                    < li > Testimonios y experiencias de usuarios </ li >
+                    < li  class =" descripcion " > Historias de éxito de pacientes que han utilizado los servicios de la prepaga y han tenido experiencias positivas. </li>​​
+                    < li > Promociones y descuentos </ li >
+                    < li  class =" descripcion " > Promociones especiales, descuentos o beneficios adicionales para afiliados. </li>​​
+                    < li > Programas de salud mental </ li >
+                    < li  class =" descripcion " > Nuevos programas o servicios para el cuidado de la salud mental, como terapia psicológica en línea, asesoramiento telefónico o recursos de bienestar emocional. </li>​​
+                    < li > Atención especializada </ li >
+                    < li  class =" descripcion " > Ampliación de la red de especialistas médicos o ha añadido nuevas áreas de especialización, como medicina deportiva, medicina estética o medicina preventiva. </li>​​
+                    < li > Acceso a medicamentos </ li >
+                    < li  class =" descripcion " > Se han establecido convenios con farmacias para ofrecer descuentos especiales en medicamentos recetados o se han implementado programas de entrega a domicilio. </li>​​
+                    <li> Información sobre enfermedades </li>​​
+                    < li  class =" descripcion " > Recursos educativos sobre enfermedades comunes, nuevos tratamientos, consejos de prevención y otros temas relacionados con la salud. </li>​​
+                    < li > Opiniones de expertos </ li >
+                    < li  class =" descripcion " > Artículos escritos por profesionales de la salud, como médicos, nutricionistas o fisioterapeutas, sobre temas relevantes para la comunidad. </li>​​
+                    < li > Compromiso social </ li >
+                    < li  class =" descripcion " > Iniciativas de responsabilidad social corporativa, como campañas de donación de sangre, programas de voluntariado o proyectos comunitarios. </li>​​
+                </ul>​​
+            </div>​​
+        </div>​​
+    </principal>​​
+
+<!-- PIE DE PIE -->
+    < clase de pie de página  =" pie de página " >
+        < div  class =" pieContenedor " >
+            < ul  clase =" footLista " >
+                < li  class =" footItem " > < a  href =" # " class =" footLink " > < i  class =" fa-brands fa-square-whatsapp " > </ i > </ a > </ li >
+                < li  class =" footItem " > < a  href =" https://www.facebook.com/ " class =" footLink " > < i  class =" fa-brands fa-square-facebook " > </ i > < / a > </​​
+                < li  class =" footItem " > < a  href =" https://www.instagram.com/ " class =" footLink " > < i  class =" fa-brands fa-square-instagram " > </ i > < / a > </​​
+                < li  class =" footItem " > < a  href =" https://twitter.com/ " class =" footLink " > < i  class =" fa-brands fa-square-twitter " > </ i > </ a > </ li >
+                < li  class =" footItem " > < a  href =" https://www.youtube.com/ " class =" footLink " > < i  class =" fa-brands fa-square-youtube " > </ i > < / a > </li>​​
+                < li  class =" footItem " > < p > © 2024 Página de Salud. Todos los derechos reservados. < br > Superintendencia de Servicios de Salud < br > Órgano de control de obras sociales y entidades de medicina prepaga < br > 0800-222-SALUD (72583) | www.sssalud.gob.ar </p> </li>​​​​
+            </ul>​​
+        </div>​​
+    </ pie de página >
     <script src="script.js"></script>
 </body>
 </html>
