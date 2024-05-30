@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const novedadesSection = document.getElementById('novedades');
     const cdcContainer = document.createElement('div');
-    cdcContainer.innerHTML = `<h3>Recursos de la CDC</h3>`;
+    cdcContainer.innerHTML = '<h3>Recursos de la CDC</h3>';
 
     const list = document.createElement('ul');
     dataFromCDC.forEach(item => {
