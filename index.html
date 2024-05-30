@@ -1,184 +1,13 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Salud</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f8ff;
-        }
-
-        header {
-            background-color: #add8e6;
-            padding: 20px;
-            text-align: center;
-            color: white;
-        }
-
-        nav {
-            background-color: #add8e6;
-            overflow: hidden;
-        }
-
-        nav a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        nav a:hover {
-            background-color: #00bfff;
-        }
-
-        section {
-            padding: 20px;
-            margin-top: 10px;
-        }
-
-        section img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        /* FOOTER */
-        .footer {
-            background-color: #008DDA;
-            color: #ffffff;
-            width: 100%;
-            min-height: 10vh;
-            bottom: 0;
-        }
-
-        .footer p {
-            font-size: 0.7rem;
-            border-left: 2px solid #ffffffbd;
-            padding-left: 5%;
-        }
-
-        .footContenedor {
-            display: flex;
-            place-content: center;
-            padding: 1.5rem 0;
-        }
-
-        .footLista {
-            list-style: none;
-            display: flex;
-            flex-direction: row;
-            place-content: space-between end;
-            place-items: center end;
-        }
-
-        .footItem {
-            margin: 0 20px 0 0;
-        }
-
-        .footLink {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            padding: 0.3rem 0.5rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .footLink:hover {
-            color: black;
-            background-color: #41C9E2;
-            transform: scale(0.95);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-        }
-
-        /* LOGIN FORM */
-        .login-container {
-            width: 100%;
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #fff;
-        }
-
-        .login-container h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .login-container label {
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        .login-container input[type="text"],
-        .login-container input[type="password"],
-        .login-container input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-
-        .login-container input[type="submit"] {
-            background-color: #008DDA;
-            color: white;
-            cursor: pointer;
-        }
-
-        .login-container input[type="submit"]:hover {
-            background-color: #00bfff;
-        }
-
-        /* MEDIA QUERIES */
-        @media (max-width: 768px) {
-            nav a {
-                float: none;
-                display: block;
-                text-align: left;
-            }
-
-            .login-container {
-                width: 90%;
-            }
-        }
-
-        /* BOTONES INTERACTIVOS */
-        button {
-            background-color: #008DDA;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            transition: background-color 0.3s, transform 0.3s;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        button:hover {
-            background-color: #00bfff;
-            transform: scale(1.05);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <header>
-        
         <h1>Quiénes Somos</h1>
         <nav>
             <a href="planes2.html">Planes</a>
@@ -186,7 +15,6 @@
             <a href="#novedades">Novedades</a>
             <a href="#preguntas">Preguntas Frecuentes</a>
             <a href="#contacto">Contacto</a>
-            <a href="#mi-cuenta">Mi Cuenta</a>
         </nav>
     </header>
 
@@ -207,7 +35,6 @@
         <p>Contamos con una amplia red de sucursales a lo largo del país para brindarte la mejor atención cerca de tu hogar. Nuestras sucursales están equipadas con tecnología de punta y personal altamente calificado para atender todas tus necesidades de salud.</p>
         <img src="Imagenes/clini.jpg" alt="Imagen de Sucursales">
         <img src="Imagenes/pexels-matreding-9741531.jpg" alt="Imagen de Sucursales">
-        
     </section>
 
     <section id="novedades">
@@ -239,17 +66,6 @@
         </form>
     </section>
 
-    <section id="mi-cuenta" class="login-container">
-        <h2>Iniciar Sesión</h2>
-        <form onsubmit="alert('Inicio de sesión exitoso.'); return false;">
-            <label for="usuario">Usuario:</label>
-            <input type="text" id="usuario" name="usuario" required><br>
-            <label for="contrasena">Contraseña:</label>
-            <input type="password" id="contrasena" name="contrasena" required><br>
-            <button type="submit">Ingresar</button>
-        </form>
-    </section>
-
     <footer class="footer">
         <div class="footContenedor">
             <ul class="footLista">
@@ -259,5 +75,8 @@
             </ul>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
