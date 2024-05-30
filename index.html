@@ -1,121 +1,97 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Salud</title>
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f8ff;
-}
-
-header {
-    background-color: #add8e6;
-    padding: 20px;
-    text-align: center;
-    color: white;
-}
-
-nav {
-    background-color: #add8e6;
-    overflow: hidden;
-}
-
-nav a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    background-color: #00bfff;
-}
-
-section {
-    padding: 20px;
-    margin-top: 10px;
-}
-
-footer {
-    background-color: #add8e6;
-    padding: 10px;
-    text-align: center;
-    color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-</style>
-    
+    <link rel="stylesheet" href="estiloIndex.css">
+    <!-- Iconos -->
+    <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/906492adb2.js" crossorigin="anonymous"></script>
+    <title>Obra Social - Inicio</title>
 </head>
-    
+
 <body>
-    <header>
-        <h1>Quiénes Somos</h1>
-        <nav>
-            <a href="planes2.html">Planes</a>
-            <a href="#sucursales">Sucursales</a>
-            <a href="#novedades">Novedades</a>
-            <a href="#preguntas">Preguntas Frecuentes</a>
-            <a href="#contacto">Contacto</a>
-            <a href="#mi-cuenta">Mi Cuenta</a>
+<!-- HEADER -->
+    <header class="header">
+        <nav class="navegacion">
+            <a href="index.html" class="anclaLogo">
+                <i class="fas fa-house-medical" aria-hidden="true"></i>
+                <span>OBRA SOCIAL</span>
+            </a>
+            <ul class="navLista">
+                <!-- <li class="navItem"><a href="#" class="navLink">Quiénes somos</a></li> -->
+                <li class="navItem"><a href="planes2.html" class="navLink">Planes</a></li>
+                <!-- <li class="navItem"><a href="#" class="navLink">Sucursales</a></li> -->
+                <!-- <li class="navItem"><a href="#" class="navLink">Novedades</a></li> -->
+                <li class="navItem"><a href="faq.html" class="navLink">Preguntas frecuentes</a></li>
+                <li class="navItem"><a href="contacto.html" class="navLink">Contacto</a></li>
+                <li class="navItem"><a href="inicioSesion.html" class="navLink miCuenta"><i class="fas fa-user"></i> Mi cuenta</a></li>
+            </ul>          
         </nav>
     </header>
-
-    <section id="planes">
-        <h2>Planes</h2>
-        <ul>
-            <li>Plan A</li>
-            <li>Plan B</li>
-            <li>Plan C</li>
-        </ul>
-    </section>
-
-    <section id="sucursales">
-        <h2>Sucursales</h2>
-        <p>Información sobre las sucursales de la obra social.</p>
-    </section>
-
-    <section id="novedades">
-        <h2>Novedades</h2>
-        <p>Información sobre novedades, descuentos, etc.</p>
-    </section>
-
-  <section id="preguntas">
-        <h2>Preguntas Frecuentes</h2>
-        <form>
-            <!-- Formulario de preguntas frecuentes -->
-        </form>
-
-        <form>
-            <label for="pregunta">Escribe tu pregunta:</label><br>
-            <input type="text" id="pregunta" name="pregunta"><br>
-            <input type="submit" value="Enviar">
-        </form>
-    </section>
-
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <form>
-            <label for="nombre">Nombre:</label><br>
-            <input type="text" id="nombre" name="nombre"><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br>
-            <label for="mensaje">Mensaje:</label><br>
-            <textarea id="mensaje" name="mensaje"></textarea><br>
-            <input type="submit" value="Enviar">
-        </form>
-    </section>
-
-    <footer>
-        <p>© 2024 Página de Salud. Todos los derechos reservados.</p>
+    
+    <main id="main" class="main">
+ <!-- ACORDEON -->
+        <div class="acordeon">
+            <!-- Quienes somos -->
+            <input type="radio" name="select" class="acordeon-select" checked />
+            <div class="acordeon-title"><span>Quiénes somos</span></div>
+            <div class="acordeon-content" id="somos">
+                <p>Empresa privada que brinda servicios de atención médica a sus afiliados a cambio de una cuota mensual.<br>
+                Ofrecemos una variedad de planes de salud que pueden incluir consultas médicas, hospitalización, servicios de laboratorio, medicamentos, y en algunos casos también servicios de odontología, oftalmología, y otros tratamientos especializados.</p>
+            </div>
+            <!-- Sucursales -->
+            <input type="radio" name="select" class="acordeon-select" />
+            <div class="acordeon-title"><span>Sucursales</span></div>
+            <div class="acordeon-content"><p>Información sobre las sucursales de la obra social.</p></div>
+            <!-- Novedades -->
+            <input type="radio" name="select" class="acordeon-select" />
+            <div class="acordeon-title"><span>Novedades</span></div>
+            <div class="acordeon-content">
+                <ul>
+                    <li>Nuevos planes de salud</li>
+                    <li>Coberturas especiales</li>
+                    <li class="descripcion">Nuevas coberturas o servicios especiales, como atención domiciliaria, telemedicina, programas de bienestar.</li>
+                    <li>Alianzas y convenios</li>
+                    <li class="descripcion">Nuevas alianzas con centros médicos, laboratorios, farmacias u otros proveedores de servicios de salud.</li>
+                    <li>Tecnología y aplicaciones</li>
+                    <li class="descripcion">Plataformas en línea para facilitar la gestión de la salud y el acceso a servicios.</li>
+                    <li>Eventos y actividades</li>
+                    <li class="descripcion">Eventos, charlas educativas, programas de prevención de enfermedades u otras actividades relacionadas con la salud.</li>
+                    <li>Actualizaciones legales</li>
+                    <li>Testimonios y experiencias de usuarios</li>
+                    <li class="descripcion">Historias de éxito de pacientes que han utilizado los servicios de la prepaga y han tenido experiencias positivas.</li>
+                    <li>Promociones y descuentos</li>
+                    <li class="descripcion">Promociones especiales, descuentos o beneficios adicionales para afiliados.</li>
+                    <li>Programas de salud mental</li>
+                    <li class="descripcion">Nuevos programas o servicios para el cuidado de la salud mental, como terapia psicológica en línea, asesoramiento telefónico o recursos de bienestar emocional.</li>
+                    <li>Atención especializada</li>
+                    <li class="descripcion">Ampliación de la red de especialistas médicos o ha añadido nuevas áreas de especialización, como medicina deportiva, medicina estética o medicina preventiva.</li>
+                    <li>Acceso a medicamentos</li>
+                    <li class="descripcion">Se han establecido convenios con farmacias para ofrecer descuentos especiales en medicamentos recetados o se han implementado programas de entrega a domicilio.</li>
+                    <li>Información sobre enfermedades</li>
+                    <li class="descripcion">Recursos educativos sobre enfermedades comunes, nuevos tratamientos, consejos de prevención y otros temas relacionados con la salud.</li>
+                    <li>Opiniones de expertos</li>
+                    <li class="descripcion">Artículos escritos por profesionales de la salud, como médicos, nutricionistas o fisioterapeutas, sobre temas relevantes para la comunidad.</li>
+                    <li>Compromiso social</li>
+                    <li class="descripcion">Iniciativas de responsabilidad social corporativa, como campañas de donación de sangre, programas de voluntariado o proyectos comunitarios.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    
+<!-- FOOTER -->
+    <footer class="footer">
+        <div class="footContenedor">
+            <ul class="footLista">
+                <li class="footItem"><a href="#" class="footLink"><i class="fa-brands fa-square-whatsapp"></i></a></li>
+                <li class="footItem"><a href="https://www.facebook.com/" class="footLink"><i class="fa-brands fa-square-facebook"></i></a></li>
+                <li class="footItem"><a href="https://www.instagram.com/" class="footLink"><i class="fa-brands fa-square-instagram"></i></a></li>
+                <li class="footItem"><a href="https://twitter.com/" class="footLink"><i class="fa-brands fa-square-twitter"></i></a></li>
+                <li class="footItem"><a href="https://www.youtube.com/" class="footLink"><i class="fa-brands fa-square-youtube"></i></a></li>
+                <li class="footItem"><p>© 2024 Página de Salud. Todos los derechos reservados. <br>Superintendencia de Servicios de Salud <br>Órgano control de obras sociales y entidades de medicina prepaga <br>0800-222-SALUD (72583) | www.sssalud.gob.ar</p></li>
+            </ul>
+        </div>
     </footer>
 </body>
 </html>
-
