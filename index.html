@@ -48,7 +48,29 @@
             <input type="radio" name="select" class="acordeon-select" />
             <div class="acordeon-title"><span>Novedades</span></div>
             <div class="acordeon-content">
-                <ul>
+               
+                    document.addEventListener('DOMContentLoaded', function() {
+       // Simulación de obtención de datos de la CDC
+       const dataFromCDC = [
+        { title: "Prevención de la Gripe", link: "https://www.cdc.gov/flu/prevent/index.html" },
+        { title: "Información sobre el COVID-19", link: "https://www.cdc.gov/coronavirus/2019-ncov/index.html" }
+    ];
+
+    const novedadesSection = document.getElementById('novedades');
+    const cdcContainer = document.createElement('div');
+    cdcContainer.innerHTML = <h3>Recursos de la CDC</h3>;
+
+    const list = document.createElement('ul');
+    dataFromCDC.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = <a href="${item.link}" target="_blank">${item.title}</a>;
+        list.appendChild(listItem);
+    });
+
+    cdcContainer.appendChild(list);
+    novedadesSection.appendChild(cdcContainer);
+});
+                 <ul>
                     <li>Nuevos planes de salud</li>
                     <li>Coberturas especiales</li>
                     <li class="descripcion">Nuevas coberturas o servicios especiales, como atención domiciliaria, telemedicina, programas de bienestar.</li>
@@ -68,13 +90,8 @@
                     <li>Atención especializada</li>
                     <li class="descripcion">Ampliación de la red de especialistas médicos o ha añadido nuevas áreas de especialización, como medicina deportiva, medicina estética o medicina preventiva.</li>
                     <li>Acceso a medicamentos</li>
-                    <li class="descripcion">Se han establecido convenios con farmacias para ofrecer descuentos especiales en medicamentos recetados o se han implementado programas de entrega a domicilio.</li>
-                    <li>Información sobre enfermedades</li>
-                    <li class="descripcion">Recursos educativos sobre enfermedades comunes, nuevos tratamientos, consejos de prevención y otros temas relacionados con la salud.</li>
-                    <li>Opiniones de expertos</li>
-                    <li class="descripcion">Artículos escritos por profesionales de la salud, como médicos, nutricionistas o fisioterapeutas, sobre temas relevantes para la comunidad.</li>
-                    <li>Compromiso social</li>
-                    <li class="descripcion">Iniciativas de responsabilidad social corporativa, como campañas de donación de sangre, programas de voluntariado o proyectos comunitarios.</li>
+                   
+                   
                 </ul>
             </div>
         </div>
