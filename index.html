@@ -4,125 +4,178 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Salud</title>
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f8ff;
-}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
 
-header {
-    background-color: #add8e6;
-    padding: 20px;
-    text-align: center;
-    color: white;
-}
+        header {
+            background-color: #add8e6;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
 
-nav {
-    background-color: #add8e6;
-    overflow: hidden;
-}
+        nav {
+            background-color: #add8e6;
+            overflow: hidden;
+        }
 
-nav a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
 
-nav a:hover {
-    background-color: #00bfff;
-}
+        nav a:hover {
+            background-color: #00bfff;
+        }
 
-section {
-    padding: 20px;
-    margin-top: 10px;
-}
-    /* FOOTER */
-.footer{
-    background-color: #008DDA;
-    color: #ffffff;
-    width: 100%;
-    min-height: 10vh;
-    bottom: 0;
+        section {
+            padding: 20px;
+            margin-top: 10px;
+        }
 
-    p {
-        font-size: 0.7rem;
-        border-left: 2px solid #ffffffbd;
-        padding-left: 5%;
-    }
-    
-    .footContenedor{
-        display: flex;
-        place-content: center;
-        padding: 1.5rem 0;
+        section img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
 
-        .footLista{
+        /* FOOTER */
+        .footer {
+            background-color: #008DDA;
+            color: #ffffff;
+            width: 100%;
+            min-height: 10vh;
+            bottom: 0;
+        }
+
+        .footer p {
+            font-size: 0.7rem;
+            border-left: 2px solid #ffffffbd;
+            padding-left: 5%;
+        }
+
+        .footContenedor {
+            display: flex;
+            place-content: center;
+            padding: 1.5rem 0;
+        }
+
+        .footLista {
             list-style: none;
             display: flex;
             flex-direction: row;
             place-content: space-between end;
             place-items: center end;
-    
-            /* Botones */
-            .footItem{
-                margin: 0 20px 0 0;
-    
-                .footLink{
-                    color: #ffffff;
-                    text-decoration: none;
-                    font-weight: 700;
-                    font-size: 1.1rem;
-                    padding: 0.3rem 0.5rem;
-    
-                    /* Efecto de botón presionado */
-                    transition: transform 0.3s, box-shadow 0.3s;
-                    &:hover{
-                        color: black;
-                        background-color: #41C9E2;
-                        transform: scale(0.95);
-                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-                        border-radius: 10px;
-                    }
-                }
+        }
+
+        .footItem {
+            margin: 0 20px 0 0;
+        }
+
+        .footLink {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 0.3rem 0.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .footLink:hover {
+            color: black;
+            background-color: #41C9E2;
+            transform: scale(0.95);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        /* LOGIN FORM */
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-container label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"],
+        .login-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .login-container input[type="submit"] {
+            background-color: #008DDA;
+            color: white;
+            cursor: pointer;
+        }
+
+        .login-container input[type="submit"]:hover {
+            background-color: #00bfff;
+        }
+
+        /* MEDIA QUERIES */
+        @media (max-width: 768px) {
+            nav a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .login-container {
+                width: 90%;
             }
         }
-    }
-}
 
-/* Estilos de FOOTER para mobile y tablet */
-@media (max-width: 760px){
-    .footer{
-        height: initial;
-
-        .footContenedor{
-            margin-left: 10px;
-            margin-right: 10px;
-            flex-direction: column;
-            row-gap: 20px;
-
-            .footLista{
-                padding: initial;
-
-                .footItem{
-                    .footLink{
-                        font-weight: 400;
-                        margin-right: initial;
-                        font-size: 1rem;
-                        padding: 0.2rem;
-                    }
-                }
-            }
+        /* BOTONES INTERACTIVOS */
+        button {
+            background-color: #008DDA;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition: background-color 0.3s, transform 0.3s;
+            cursor: pointer;
+            border-radius: 5px;
         }
-    }
-}
-</style>
-    
+
+        button:hover {
+            background-color: #00bfff;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
-    
+
 <body>
     <header>
         <h1>Quiénes Somos</h1>
@@ -143,59 +196,63 @@ section {
             <li>Plan B</li>
             <li>Plan C</li>
         </ul>
+        <p>Nuestros planes de salud están diseñados para ofrecer la mejor cobertura y servicios a nuestros afiliados. Contamos con planes personalizados que se adaptan a las necesidades individuales y familiares, asegurando una atención médica de calidad.</p>
+        <img src="https://via.placeholder.com/600x400" alt="Imagen de Planes">
     </section>
 
     <section id="sucursales">
         <h2>Sucursales</h2>
-        <p>Información sobre las sucursales de la obra social.</p>
+        <p>Contamos con una amplia red de sucursales a lo largo del país para brindarte la mejor atención cerca de tu hogar. Nuestras sucursales están equipadas con tecnología de punta y personal altamente calificado para atender todas tus necesidades de salud.</p>
+        <img src="https://via.placeholder.com/600x400" alt="Imagen de Sucursales">
     </section>
 
     <section id="novedades">
         <h2>Novedades</h2>
-        <p>Información sobre novedades, descuentos, etc.</p>
+        <p>Mantente al día con las últimas novedades y beneficios exclusivos para nuestros afiliados. Ofrecemos descuentos en farmacias, actividades de bienestar, y mucho más. No te pierdas las actualizaciones y mejora tu calidad de vida con nuestros servicios.</p>
+        <img src="https://via.placeholder.com/600x400" alt="Imagen de Novedades">
     </section>
 
-  <section id="preguntas">
+    <section id="preguntas">
         <h2>Preguntas Frecuentes</h2>
-        <form>
-            <!-- Formulario de preguntas frecuentes -->
-        </form>
-
-        <form>
+        <form onsubmit="alert('Pregunta enviada.'); return false;">
             <label for="pregunta">Escribe tu pregunta:</label><br>
-            <input type="text" id="pregunta" name="pregunta"><br>
-            <input type="submit" value="Enviar">
+            <input type="text" id="pregunta" name="pregunta" required><br>
+            <button type="submit">Enviar</button>
         </form>
     </section>
 
     <section id="contacto">
         <h2>Contacto</h2>
-        <form>
+        <form onsubmit="alert('Formulario enviado.'); return false;">
             <label for="nombre">Nombre:</label><br>
-            <input type="text" id="nombre" name="nombre"><br>
+            <input type="text" id="nombre" name="nombre" required><br>
             <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br>
+            <input type="email" id="email" name="email" required><br>
             <label for="mensaje">Mensaje:</label><br>
-            <textarea id="mensaje" name="mensaje"></textarea><br>
-            <input type="submit" value="Enviar">
+            <textarea id="mensaje" name="mensaje" required></textarea><br>
+            <button type="submit">Enviar</button>
         </form>
     </section>
 
-    
-    
-        <!-- FOOTER -->
+    <section id="mi-cuenta" class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form onsubmit="alert('Inicio de sesión exitoso.'); return false;">
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="usuario" required><br>
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required><br>
+            <button type="submit">Ingresar</button>
+        </form>
+    </section>
+
     <footer class="footer">
         <div class="footContenedor">
             <ul class="footLista">
-                <li class="footItem"><a href="#" class="footLink"><i class="fa-brands fa-square-whatsapp"></i></a></li>
-                <li class="footItem"><a href="https://www.facebook.com/" class="footLink"><i class="fa-brands fa-square-facebook"></i></a></li>
-                <li class="footItem"><a href="https://www.instagram.com/" class="footLink"><i class="fa-brands fa-square-instagram"></i></a></li>
-                <li class="footItem"><a href="https://twitter.com/" class="footLink"><i class="fa-brands fa-square-twitter"></i></a></li>
-                <li class="footItem"><a href="https://www.youtube.com/" class="footLink"><i class="fa-brands fa-square-youtube"></i></a></li>
-                <li class="footItem"><p>© 2024 Página de Salud. Todos los derechos reservados. <br>Superintendencia de Servicios de Salud <br>Órgano control de obras sociales y entidades de medicina prepaga <br>0800-222-SALUD (72583) | www.sssalud.gob.ar</p></li>
+                <li class="footItem">
+                    <p>© 2024 Página de Salud. Todos los derechos reservados. <br>Superintendencia de Servicios de Salud <br>Órgano control de obras sociales y entidades de medicina prepaga <br>0800-222-SALUD (72583) | www.sssalud.gob.ar</p>
+                </li>
             </ul>
         </div>
-   
     </footer>
 </body>
 </html>
