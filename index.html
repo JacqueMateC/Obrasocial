@@ -44,6 +44,7 @@
             <input type="radio" name="select" class="acordeon-select" />
             <div class="acordeon-title"><span>Sucursales</span></div>
             <div class="acordeon-content"><p>Información sobre las sucursales de la obra social.</p></div>
+            
             <!-- Novedades -->
             <input type="radio" name="select" class="acordeon-select" />
             <div class="acordeon-title"><span>Novedades</span></div>
@@ -70,7 +71,9 @@
                     <li class="descripcion">Ampliación de la red de especialistas médicos o ha añadido nuevas áreas de especialización, como medicina deportiva, medicina estética o medicina preventiva.</li>
                     <li>Acceso a medicamentos</li>           
                 </ul>
-                 document.addEventListener('DOMContentLoaded', function() {
+            </div>
+        </div>
+        document.addEventListener('DOMContentLoaded', function() {
        // Simulación de obtención de datos de la CDC
        const dataFromCDC = [
         { title: "Prevención de la Gripe", link: "https://www.cdc.gov/flu/prevent/index.html" },
@@ -91,8 +94,7 @@
     cdcContainer.appendChild(list);
     novedadesSection.appendChild(cdcContainer);
 });
-            </div>
-        </div>
+        
     </main>
     
 <!-- FOOTER -->
