@@ -42,7 +42,7 @@ section {
     margin-top: 10px;
 }
 
-footer {
+/*footer {
     background-color: #add8e6;
     padding: 10px;
     text-align: center;
@@ -50,6 +50,84 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}*/
+    /* FOOTER */
+.footer{
+    background-color: #008DDA;
+    color: #ffffff;
+    width: 100%;
+    min-height: 10vh;
+    bottom: 0;
+
+    p {
+        font-size: 0.7rem;
+        border-left: 2px solid #ffffffbd;
+        padding-left: 5%;
+    }
+    
+    .footContenedor{
+        display: flex;
+        place-content: center;
+        padding: 1.5rem 0;
+
+        .footLista{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            place-content: space-between end;
+            place-items: center end;
+    
+            /* Botones */
+            .footItem{
+                margin: 0 20px 0 0;
+    
+                .footLink{
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-weight: 700;
+                    font-size: 1.1rem;
+                    padding: 0.3rem 0.5rem;
+    
+                    /* Efecto de botón presionado */
+                    transition: transform 0.3s, box-shadow 0.3s;
+                    &:hover{
+                        color: black;
+                        background-color: #41C9E2;
+                        transform: scale(0.95);
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Estilos de FOOTER para mobile y tablet */
+@media (max-width: 760px){
+    .footer{
+        height: initial;
+
+        .footContenedor{
+            margin-left: 10px;
+            margin-right: 10px;
+            flex-direction: column;
+            row-gap: 20px;
+
+            .footLista{
+                padding: initial;
+
+                .footItem{
+                    .footLink{
+                        font-weight: 400;
+                        margin-right: initial;
+                        font-size: 1rem;
+                        padding: 0.2rem;
+                    }
+                }
+            }
+        }
+    }
 }
 </style>
     
