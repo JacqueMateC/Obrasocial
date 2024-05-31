@@ -18,4 +18,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     cdcContainer.appendChild(list);
     novedadesSection.appendChild(cdcContainer);
+
+    // Cargar iframe con el contenido del enlace proporcionado
+    const iframeContainer = document.getElementById('contenido-iframe');
+    const iframe = document.createElement('iframe');
+    iframe.src = "https://servicios.pami.org.ar/vademecum/views/consultaPublica/listado.zul";
+    iframe.width = "100%";
+    iframe.height = "600px"; // Ajusta la altura según sea necesario
+    iframe.style.border = "none";
+    iframeContainer.appendChild(iframe);
 });
