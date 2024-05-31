@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estiloInicioSesion.css">
-    <title>Obra Social - Contacto</title>
+    <link rel="stylesheet" href="estiloAPI.css" />
+ 
+    <title>Obra Social - Patrocinadores</title>
 </head>
 <body>
-    <!-- HEADER -->
     <header class="header">
         <nav class="navegacion">
             <a href="index.html" class="anclaLogo">
@@ -24,37 +25,25 @@
             </ul>          
         </nav>
     </header>
-
-    <!-- CONTACTO -->
-    <main id="main" class="main">
-        <section class="contacto">
-            <form class="formulario" id="contactForm">
-                <h1>Contacto</h1>
-                <p>Completa los datos para ponerte en contacto con nosotros.</p>
-                <div>
-                    <input class="input" type="text" id="nombre" name="nombre" placeholder="Nombre">
-                    <div id="nombreError" class="error"></div>
-                </div>
-                <div>
-                    <input class="input" type="email" id="correo" name="correo" placeholder="Correo electrónico">
-                    <div id="correoError" class="error"></div>
-                </div>
-                <div>
-                    <textarea class="input" id="mensaje" name="mensaje" placeholder="Mensaje" rows="5"></textarea>
-                    <div id="mensajeError" class="error"></div>
-                </div>
-                <div>
-                    <input class="botonIngresar" type="submit" value="Enviar">
-                </div>
-            </form>
-        </section>
-        <section id="graciasMsj" class="gracias-" style="display:none;">
-            <h2>¡Mensaje Enviado!</h2>
-            <button class="botonIngresar" onclick="window.location.href='index.html'">Continuar</button>
+    <main>
+        <section id="tendencias" class="tendencias">
+            <h3 class="titulosSection">PUBLICIDAD</h3>
+            <div class="elementos">
+                <!-- Colocar los elementos de la API -->
+                <div class="pelicula"><img src="imagen1.jpg" alt="Imagen 1"></div>
+                <div class="pelicula"><img src="imagen2.jpg" alt="Imagen 2"></div>
+                <div class="pelicula"><img src="imagen3.jpg" alt="Imagen 3"></div>
+                <div class="pelicula"><img src="imagen4.jpg" alt="Imagen 4"></div>
+                <div class="pelicula"><img src="imagen5.jpg" alt="Imagen 5"></div>
+                <div class="pelicula"><img src="imagen6.jpg" alt="Imagen 6"></div>
+            </div>
+            <div class="botones">
+                <button class="boton anterior">Anterior</button>
+                <button class="boton siguiente">Siguiente</button>
+            </div>
         </section>
     </main>
-
-    <!-- FOOTER -->
+    <script src="scriptAPI.js"></script>
     <footer class="footer">
         <div class="footContenedor">
             <ul class="footLista">
@@ -67,6 +56,5 @@
             </ul>
         </div>
     </footer>
-    <script src="contacto.js"></script>
 </body>
 </html>

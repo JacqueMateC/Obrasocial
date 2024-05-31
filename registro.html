@@ -4,37 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estiloInicioSesion.css">
-    <!-- Iconos -->
-    <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/906492adb2.js" crossorigin="anonymous"></script>
-    <title>Obra Social - Iniciar sesión</title>
+    <title>Obra Social - Registrarse</title>
 </head>
 
 <body>
 <!-- HEADER -->
-<header class="header">
-    <nav class="navegacion">
-        <a href="index.html" class="anclaLogo">
-            <i class="fas fa-house-medical" aria-hidden="true"></i>
-            <span>OBRA SOCIAL</span>
-        </a>
-        <ul class="navLista">
-            <li class="navItem"><a href="planes2.html" class="navLink">Planes</a></li>
-            <li class="navItem"><a href="faq.html" class="navLink">Preguntas frecuentes</a></li>
-            <li class="navItem"><a href="contacto.html" class="navLink">Contacto</a></li>
-            <li class="navItem"><a href="patrocinadores.html" class="navLink">Patrocinadores</a></li>
-            <li class="navItem"><a href="inicioSesion.html" class="navLink miCuenta"><i class="fas fa-user"></i> Mi cuenta</a></li>
-            
-        </ul>          
-    </nav>
-</header>
+    <header class="header">
+        <nav class="navegacion">
+            <a href="index.html" class="anclaLogo">
+                <i class="fas fa-house-medical" aria-hidden="true"></i>
+                <span>OBRA SOCIAL</span>
+            </a>
+            <ul class="navLista">
+                <li class="navItem"><a href="planes2.html" class="navLink">Planes</a></li>
+                <li class="navItem"><a href="faq.html" class="navLink">Preguntas frecuentes</a></li>
+                <li class="navItem"><a href="contacto.html" class="navLink">Contacto</a></li>
+                <li class="navItem"><a href="inicioSesion.html" class="navLink miCuenta"><i class="fas fa-user"></i> Mi cuenta</a></li>
+            </ul>          
+        </nav>
+    </header>
     
-<!-- LOGIN -->
-<main id="main" class="main">
-    <section class="loguearse">
-        <form class="formulario" id="loginForm">
-            <h1>Iniciar sesión</h1>
-            <p>Ingresá tus datos para acceder a tu cuenta.</p>
+<!-- REGISTRO -->
+<main id="main" class="main" style="background-color: #f0f0f0;">
+    <section class="registrarse">
+        <form class="formulario" id="registerForm">
+            <h1>Registrarse</h1>
+            <p>Completa los datos para crear tu cuenta.</p>
+            <div>
+                <input class="input" type="text" id="nomyApe" name="nomyApe" placeholder="Nombre y Apellido">
+                <div id="nomyApeError" class="error"></div>
+            </div>
+            <div>
+                <input class="input" type="text" id="telefono" name="telefono" placeholder="Teléfono" maxlength="10">
+                <div id="telefonoError" class="error"></div>
+            </div>
             <div>
                 <input class="input" type="email" id="email" name="email" placeholder="Email">
                 <div id="emailError" class="error"></div>
@@ -43,14 +46,13 @@
                 <input class="input" type="password" id="password" name="password" placeholder="Contraseña">
                 <div id="passwordError" class="error"></div>
             </div>
-            <div><input class="botonIngresar" type="submit" value="Ingresar"></div>
-            <p>¿No sos socio? <a href="registro.html">Registrate</a></p>
+            <div><input class="botonIngresar" type="submit" value="Registrarse"></div>
+            <p>¿Ya tienes una cuenta? <a href="inicioSesion.html">Inicia sesión</a></p>
         </form>
     </section>
     <section id="graciasMsj" class="gracias-" style="display:none;">
-        <h2>INGRESO CORRECTO!</h2>
+        <h2>¡Registro Exitoso!</h2>
         <button class="botonIngresar" onclick="window.location.href='index.html'">Continuar</button>
-    
     </section>
 </main>
     
@@ -67,6 +69,6 @@
             </ul>
         </div>
     </footer>
-    <script src="inicioSesion.js"></script>
+    <script src="registro.js"></script>
 </body>
 </html>
